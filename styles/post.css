@@ -1,75 +1,130 @@
-body{
-    position : relative;
-     bottom:0;
+html {
+    height: 100%;
 }
 
-.heading-content{
-   text-align: center;
-   font-size: 25px;
-   font-weight: bolder;
+body {
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
-.author{
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
+.header {
+    padding: 15px;
+    background-color: transparent;
+    margin: 0;
+    overflow: auto;
 }
 
-.author-name{
-    font-family: 'Courier New', Courier, monospace;
-   font-weight: bold;
-   font-size: 20px;
-   width: 50%;
+.logo {
+    width: 70%;
+    float: left;
 }
 
-#comments{
-    background-color: lightgrey;
-    width: 100%;
-    margin: 10px;
-    padding: 10px;
+.logo span {
+    font-family: 'Montez', cursive;
+    font-size: 35px;
+    color: #1601ff;
 }
 
-.comment{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
+.logo p {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    margin: 0;
 }
-.post-content{
-    word-wrap: break-word;
-    margin-top: 20px;
+
+.loginregbtns {
+    width: 30%;
+    float: left;
 }
-#edit-button{
-    margin-left: 500px;
+
+.loginregbtns button {
     float: right;
-    height: 40px;
-    width: 100px;
+    margin-right: 20px;
+    width: 80px;
+    color: white;
+    background-color: #1601ff;
     padding: 5px;
-    border-radius: 2px;
 }
-#like-button{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    height: 40px;
-    width: 100px;
-    padding: 5px;
-    border-radius: 2px;
+
+.main {
+    padding: 20px;
 }
-#showCount{
-    margin-bottom: 30px;
-}
-#comment-button{
-    margin-top: 20px;
+
+.title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
     margin-bottom: 20px;
-    height: 40px;
-    width: 120px;
+}
+
+.author {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.btnwithicon {
+    width: 80px;
+    padding: 10px;
+    background-color: #ed2753;
+    color: #fff;
+    border: 0;
+}
+
+.btnwithicon i {
+    margin-left: 10px;
+}
+
+.titletextbox {
+    display: none;
+    text-align: center;
+}
+
+.titletextbox input {
+    width: 70%;
     padding: 5px;
-    border-radius: 2px;
+    border: 1px solid #fed3da;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
-#allCommentsHeading{
-    font-weight: bolder;
-    padding-top: 10px;
+
+#btnsave {
+    display: none;
 }
-.comment-container{
-    min-height: 0px;
-    overflow: hidden;
+
+.content {
+    margin-top: 30px;
+}
+
+.txtareacontent {
+    font-family: inherit;
+    display: none;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #fed3da;
+    margin-bottom: 20px;
+    height: 200px;
+}
+
+.txtcomment {
+    font-family: inherit;
+    display: block;
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #fed3da;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    height: 100px;
+}
+
+.commentcard {
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 80%;
 }
