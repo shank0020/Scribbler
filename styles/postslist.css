@@ -1,85 +1,136 @@
-body{
-    background-color: #ffeedd;
+html {
+    height: 100%;
 }
 
-.container{
-    padding-top: 4px;
+body {
+    background-color: #ffeedd;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.header {
+    padding: 15px;
+    background-color: transparent;
+    margin: 0;
+    overflow: auto;
+}
+
+.logo {
+    width: 70%;
+    float: left;
+}
+
+.logo span {
+    font-family: 'Montez', cursive;
+    font-size: 35px;
+    color: #1601ff;
+}
+
+.logo p {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    margin: 0;
+}
+
+.loginregbtns {
+    width: 30%;
+    float: left;
+}
+
+.loginregbtns button {
+    float: right;
+    margin-right: 20px;
+    width: 80px;
+    color: white;
+    background-color: #1601ff;
+    padding: 5px;
+}
+
+.flex-container {
+    height: 700px;
+    padding: 40px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.card-new{
-    border-radius: 25px;
-    height: 150px;
+.card {
+    width: 600px;
+    border-radius: 10px;
+    background-color: #fff;
     display: flex;
-    flex-direction: row;
-    border-radius: 30px;
-    margin: 10px;
-    width: 500px;
-    transition: box-shadow .3s;
-  
+    height: 200px;
 }
 
-.card-new:hover {
-    box-shadow: 0 0  5px 5px rgba(33,33,33,.2); 
-  }
+.card:hover {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
 
-.side-square-wrapper{
-    height: 150px;
-    width: 17%;
-    text-align: center;
-    background-color: white;
-    padding: 40px 4px;
-    font-size: 16px;
+.card .leftsegment {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
     font-weight: bold;
-    color:gray;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
 }
 
-.custom-card-body{
-    height: 150px; 
-    background-color: #DCDCDC;
-    width: 83%;
-    padding: 5px;
-    font-size: 14px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px; 
+.card .rightsegment {
+    padding: 15px;
+    background-color: #e8e8e8;
+    flex: 3;
+    border-radius: 0 10px 10px 0;
 }
 
-.card-body-heading{
-   color:gray;
-   font-size: 16px;
-   font-weight: 500;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   padding-bottom: 5px;
-   
+.card .rightsegment i {
+    font-size: 24px;
+    color: black;
 }
 
-.post-text{
-    overflow: hidden; 
-    white-space: normal; 
-
-    height: 4.8em;  
-    text-overflow: -o-ellipsis-lastline; 
+.cardtitle {
+    color: gray;
+    font-weight: bold;
 }
 
-.trash-button{
-    float: right;
-    padding-right: 10px;
-    size: 10px;
-    cursor: pointer;
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 25%
 }
 
-.ellipsis{
-   margin-left: 370px;
-   color: grey;
-    cursor: pointer;
-    padding-right: 120px;
-    margin-bottom: 4px; 
- 
-  
+.modalbody {
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    overflow: auto;
+}
+
+.modalbody button {
+    width: 40px;
+    padding: 10px;
+    background-color: #5cb761;
+    margin-top: 20px;
+    border: 0;
+    color: white;
+}
+
+.modalbg {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
 }
