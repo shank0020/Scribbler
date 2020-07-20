@@ -8,9 +8,6 @@ body{
     flex-wrap: wrap;
     justify-content: center;
 }
-.card-new:hover {
-    box-shadow: 0 0  5px 5px rgba(33,33,33,.2); 
-  }
 
 .card-new{
     border-radius: 25px;
@@ -23,6 +20,11 @@ body{
     transition: box-shadow .3s;
   
 }
+
+.card-new:hover {
+    box-shadow: 0 0  5px 5px rgba(33,33,33,.2); 
+  }
+
 .side-square-wrapper{
     height: 150px;
     width: 17%;
@@ -34,13 +36,6 @@ body{
     color:gray;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-}
-.post-text{
-    overflow: hidden; 
-    white-space: normal; 
-
-    height: 4.8em;  
-    text-overflow: -o-ellipsis-lastline; 
 }
 
 .custom-card-body{
@@ -63,12 +58,22 @@ body{
    padding-bottom: 5px;
    
 }
+
+.post-text{
+    overflow: hidden; 
+    white-space: normal; 
+
+    height: 4.8em;  
+    text-overflow: -o-ellipsis-lastline; 
+}
+
 .trash-button{
     float: right;
     padding-right: 10px;
     size: 10px;
     cursor: pointer;
 }
+
 .ellipsis{
    margin-left: 370px;
    color: grey;
