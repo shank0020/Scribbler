@@ -2,179 +2,91 @@
 <html>
 
 <head>
-    <!-- TODO: Include Font Awesome file here -->
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/common.css">
-    <!-- TODO: Include Google Fonts file here -->
-    <link href="https://fonts.googleapis.com/css?family=Montez|Roboto|Ubuntu+Mono&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
 <body>
-    <!-- TODO: Include all your code for the header and home page here -->
-    <div class="header">
-        <div class="bg-signin">
-            <button type="button" class="signinupbutton" data-toggle="modal" data-target="#exampleModal"
-                id="sign-in-button">
-                Sign In
-            </button>
-
-            <button type="button" class="signinupbutton" data-toggle="modal" data-target="#exampleModalSignUp"
-                id="sign-up-button">
-                Sign Up
-            </button>
+    <div class="header" id="myHeader">
+        <div class="logo">
+            <span>ScriBBler</span>
+            <p>Explore, Imagine, Create</p>
         </div>
-
-        <a id="pageTitle" class="logo-title">ScriBBler</a>
-        <p class="sub-heading">Explore, Imagine, Create</p>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="exampleModalLabel"
-                            style="color:grey;font-family: 'Roboto', sans-serif;font-size: larger;">Welcome Back !</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputUsername">Username</label>
-                                <input type="text" class="form-control" id="exampleInputUsername"
-                                    aria-describedby="usernameHelp" placeholder="Enter your username"
-                                    style="background-color :#DCDCDC ;" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                    placeholder="Enter your password" style="background-color :#DCDCDC ;" required>
-                            </div>
-                            <div class="modal-signin-container">
-                                <button type="submit" class="btn btn-success btn-block">Sign In</button>
-                            </div>
-                            <div class="modal-footer border-top-0 d-flex justify-content-center">
-                                Not a member ? <a data-target="#exampleModalSignUp" data-dismiss="modal"
-                                    data-toggle="modal" href="#signup-form"> Sign Up</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+        <div class="loginregbtns">
+            <button type="button" id="btnopensigninmodal">Sign In</button>
+            <button type="button" id="btnopensignupmodal">Sign Up</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="postbuttons">
+            <a href="html/postslist.html"><button type="button">All Posts</button></a>
+            <button id="btncreatepost">Create Post</button>
+        </div>
+    </div>
+    <div id="modalsignup" class="modalbg">
+        <div class="modal">
+            <div class="modalheader">
+                <span>Get Started</span>
+                <i id="btnclose1" class="fa fa-close"></i>
+            </div>
+            <div class="modalbody">
+                <form>
+                    <p>Name</p>
+                    <input placeholder="Enter your Name" type="text" required></input>
+                    <p>Username</p>
+                    <input placeholder="Enter your Username" type="text" required></input>
+                    <p>Password</p>
+                    <input placeholder="Enter your Password" type="text" required></input>
+                    <p>Confirm Password</p>
+                    <input placeholder="Re-enter your Password" type="text" required></input>
+                    <button type="submit">Sign Up</button>
+                </form>
             </div>
         </div>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="exampleModalLabel"
-                            style="color:grey;font-family: 'Roboto', sans-serif;font-size: larger;">Get Started</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name"
-                                    style="background-color : 	#DCDCDC ;" required>
-
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputUsername1">Username</label>
-                                <input type="text" class="form-control" id="exampleInputUsername1"
-                                    aria-describedby="emailHelp" placeholder="Enter your username"
-                                    style="background-color :#DCDCDC ;" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                    placeholder="Enter your password" style="background-color :#DCDCDC ;" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Confirm Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword2"
-                                    placeholder="Re-enter your Password" style="background-color :#DCDCDC ;" required>
-                            </div>
-
-                            <div class="modal-signin-container">
-                                <button type="submit" class="btn btn-success btn-block">Sign Up</button>
-                            </div>
-
-                        </form>
-                    </div>
+    </div>
+    <div id="modalsignin" class="modalbg">
+        <div class="modal">
+            <div class="modalheader">
+                <span>Welcome Back!</span>
+                <i id="btnclose2" class="fa fa-close"></i>
+            </div>
+            <div class="modalbody">
+                <form>
+                    <p>Username</p>
+                    <input type="text" placeholder="Enter your Username" required></input>
+                    <p>Password</p>
+                    <input type="text" placeholder="Enter your Password" required></input>
+                    <button type="submit">Sign In</button>
+                </form>
+                <div class="modalfooter">
+                    <p>Not a member yet?<a href="#" id="lnksignup"> Sign Up</a></p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="posts">
-        <div class="bg-post">
-            <button type="button" class="postbutton" onclick="window.location.href = './html/postslist.html';">
-                All Posts
-            </button>
-            <button type="button" class="postbutton" data-toggle="modal" data-target="#createPost"
-                id="create-post-button">
-                Create Post
-            </button>
-        </div>
-
-        <div class="post-buttons">
-            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="createPost">
-                <div class="modal-dialog  modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title"
-                                style="color:grey;font-family: 'Roboto', sans-serif;font-size: larger;">
-                                Pen
-                                Your Post</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <form>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="title">Title</label>
-                                    <input type="text" class="form-control" id="title"
-                                        placeholder="Enter title of your post" style="background-color : 	#DCDCDC ;"
-                                        required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="content">Contents</label>
-                                    <textarea rows="10" cols="50" class="form-control" id="content"
-                                        placeholder="Enter the contents of your post"
-                                        style="background-color :	#DCDCDC;" required></textarea>
-                                </div>
-                            </div>
-                            <div class="modal-footer border-top-0 d-flex justify-content-center">
-                                <button type="submit" class="btn btn-success" style="width: 100px;">Create</button>
-                            </div>
-                        </form>
+    <div id="modalcreatepost" class="modalbg">
+        <div class="modallarge">
+            <div class="modalheader">
+                <span>Pen Your Post</span>
+                <i id="btnclose3" class="fa fa-close"></i>
+            </div>
+            <div class="modalbody">
+                <form>
+                    <p>Title</p>
+                    <input type="text" placeholder="Enter title of your post" required></input>
+                    <p>Content</p>
+                    <textarea rows="20" cols="100" placeholder="Enter the contents of your post"></textarea>
+                    <div style="text-align:center;">
+                        <button type="submit" style="width: 120px;">Create</button>
                     </div>
-                </div>
+
+                </form>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
