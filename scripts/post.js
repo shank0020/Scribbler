@@ -67,3 +67,23 @@ function countLikes() {
                 divData.innerHTML = `${count} people like this !`;
         }
 }
+const comments = [];
+
+function addingComment(item, index) {
+        const temp = document.getElementById('comments').innerHTML;
+        document.getElementById('comments').innerHTML = `<div class="comment">${item}</div>`;
+        // + `</br>`;
+        document.getElementById('comments').innerHTML += `${temp}</br>`;
+        comments.pop();
+}
+
+function addComment(comment) {
+        if (comment.value !== '') {
+                document.getElementById('comments').style.visibility = 'visible';
+                var comment = comment.value;
+                comments.unshift(comment);
+                $('#comment').val('');
+                comments.forEach(addingComment);
+                $(document).scrollTop($(document).height());
+        }
+}
