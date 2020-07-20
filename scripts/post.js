@@ -55,4 +55,15 @@ window.onload = function() {
         }
         document.getElementById('comments').style.visibility = 'hidden';
 };
-
+let count = 0;
+function countLikes() {
+        count = parseInt(count) + parseInt(1);
+        const divData = document.getElementById('showCount');
+        const likeButton = document.getElementById('likeButton');
+        likeButton.innerHTML = 'Liked';
+        if (count == 1) {
+                divData.innerHTML = `${count} person likes this !`;
+        } else {
+                divData.innerHTML = `${count} people like this !`;
+        }
+}
